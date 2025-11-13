@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Optimizer - Freemium Analytics Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-gradient">GO</div>
+                <span class="brand-text">Growth Optimizer</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-tabs" id="navTabs">
+                <button class="nav-tab active" data-tab="business-problem">
+                    <span class="material-icons">warning</span>
+                    <span class="tab-label">Business Problem</span>
+                </button>
+                <button class="nav-tab" data-tab="current-state">
+                    <span class="material-icons">insights</span>
+                    <span class="tab-label">Current State</span>
+                </button>
+                <button class="nav-tab" data-tab="experiment">
+                    <span class="material-icons">science</span>
+                    <span class="tab-label">Experiment</span>
+                </button>
+                <button class="nav-tab" data-tab="user-flow">
+                    <span class="material-icons">route</span>
+                    <span class="tab-label">User Flow</span>
+                </button>
+                <button class="nav-tab" data-tab="projections">
+                    <span class="material-icons">trending_up</span>
+                    <span class="tab-label">Projections</span>
+                </button>
+                <button class="nav-tab" data-tab="about">
+                    <span class="material-icons">person</span>
+                    <span class="tab-label">About</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Tab 1: Business Problem -->
+        <section class="tab-content active" id="business-problem">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">The Freemium Growth Challenge</h1>
+                    <p class="hero-subtitle">Student Opportunity Marketplace - EdTech Platform</p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="stat-value">311,860</span>
+                            <span class="stat-label">Monthly Active Users</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">₹10.5Cr</span>
+                            <span class="stat-label">Annual Revenue</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">3.5%</span>
+                            <span class="stat-label">Conversion Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="challenges-grid">
+                    <div class="challenge-card severity-high" data-animate>
+                        <span class="material-icons challenge-icon">trending_down</span>
+                        <div class="challenge-value">48.1%</div>
+                        <h3 class="challenge-title">High Monthly Churn</h3>
+                        <p class="challenge-description">Nearly half of users churn monthly, creating a 'leaky bucket' effect</p>
+                    </div>
+                    
+                    <div class="challenge-card severity-medium" data-animate>
+                        <span class="material-icons challenge-icon">payments</span>
+                        <div class="challenge-value">3.5%</div>
+                        <h3 class="challenge-title">Low Freemium Conversion</h3>
+                        <p class="challenge-description">Only 3.5% of free users convert to paid subscribers</p>
+                    </div>
+                    
+                    <div class="challenge-card severity-medium" data-animate>
+                        <span class="material-icons challenge-icon">analytics</span>
+                        <div class="challenge-value">1.01x</div>
+                        <h3 class="challenge-title">Marginal Net Growth</h3>
+                        <p class="challenge-description">Quick Ratio barely above 1.0 indicates stagnant growth quality</p>
+                    </div>
+                    
+                    <div class="challenge-card severity-high" data-animate>
+                        <span class="material-icons challenge-icon">trending_flat</span>
+                        <div class="challenge-value">₹10.5Cr</div>
+                        <h3 class="challenge-title">Revenue Plateau</h3>
+                        <p class="challenge-description">Annual revenue stuck despite large user base (312K MAU)</p>
+                    </div>
+                </div>
+
+                <div class="opportunity-box" data-animate>
+                    <div class="opportunity-header">
+                        <span class="material-icons">lightbulb</span>
+                        <h2>The Opportunity</h2>
+                    </div>
+                    <p class="opportunity-statement">Industry leaders achieve 6-8% conversion rates with 40-45% churn</p>
+                    <div class="opportunity-metrics">
+                        <div class="opportunity-metric">
+                            <span class="metric-label">Potential ARR</span>
+                            <span class="metric-value">₹23+ Crores</span>
+                        </div>
+                        <div class="opportunity-metric">
+                            <span class="metric-label">Target Conversion</span>
+                            <span class="metric-value">6-8%</span>
+                        </div>
+                        <div class="opportunity-metric">
+                            <span class="metric-label">Revenue Uplift</span>
+                            <span class="metric-value">120%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 2: Current State -->
+        <section class="tab-content" id="current-state">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Current State Analysis</h1>
+                    <p class="section-subtitle">Data-driven insights from platform performance</p>
+                </div>
+
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous slide">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+                    
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="slide-metric">311,860</div>
+                            <div class="slide-label">Monthly Active Users</div>
+                            <div class="slide-trend trend-neutral">
+                                <span class="material-icons">trending_flat</span>
+                                <span>Neutral</span>
+                            </div>
+                            <p class="slide-insight">Strong acquisition (43.2% new user rate) but offset by high churn</p>
+                            <div class="slide-stats">
+                                <span class="stat-pill">New Users: ~107K avg</span>
+                                <span class="stat-pill">Retention: 51.9%</span>
+                                <span class="stat-pill">Quick Ratio: 1.01x</span>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="slide-metric">₹87.2L</div>
+                            <div class="slide-label">Monthly Recurring Revenue</div>
+                            <div class="slide-trend trend-warning">
+                                <span class="material-icons">trending_down</span>
+                                <span>Warning</span>
+                            </div>
+                            <p class="slide-insight">Only 10,915 paid subscribers from 312K users (3.5% conversion)</p>
+                            <div class="slide-stats">
+                                <span class="stat-pill">Paid Subscribers: 10,915</span>
+                                <span class="stat-pill">ARPU: ₹799/mo</span>
+                                <span class="stat-pill">ARR: ₹10.5Cr</span>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="slide-metric">51.9%</div>
+                            <div class="slide-label">Gross Retention Rate</div>
+                            <div class="slide-trend trend-positive">
+                                <span class="material-icons">trending_up</span>
+                                <span>Positive</span>
+                            </div>
+                            <p class="slide-insight">Above industry benchmark (35-45%) but still 48% monthly churn</p>
+                            <div class="slide-stats">
+                                <span class="stat-pill">vs. Benchmark: +15-48%</span>
+                                <span class="stat-pill">Churn: 48.1%</span>
+                                <span class="stat-pill">Trend: Improving</span>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="slide-metric">1.53x</div>
+                            <div class="slide-label">Peak Season Quick Ratio</div>
+                            <div class="slide-trend trend-positive">
+                                <span class="material-icons">trending_up</span>
+                                <span>Positive</span>
+                            </div>
+                            <p class="slide-insight">Aug-Oct placement season drives 130K-152K new users/month</p>
+                            <div class="slide-stats">
+                                <span class="stat-pill">Peak: Aug-Oct</span>
+                                <span class="stat-pill">Low: May-Jun</span>
+                                <span class="stat-pill">Variation: 2x swing</span>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="slide-metric">7.0%</div>
+                            <div class="slide-label">Payment Page Visitors</div>
+                            <div class="slide-trend trend-warning">
+                                <span class="material-icons">warning</span>
+                                <span>Warning</span>
+                            </div>
+                            <p class="slide-insight">Major drop-off: 7% visit payment page but only 3.5% convert</p>
+                            <div class="slide-stats">
+                                <span class="stat-pill">Engaged: 50%</span>
+                                <span class="stat-pill">Explorers: 20%</span>
+                                <span class="stat-pill">Gap: 3.5pp</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-next" aria-label="Next slide">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                    
+                    <div class="carousel-dots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                        <button class="dot" data-slide="3"></button>
+                        <button class="dot" data-slide="4"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Experiment Design -->
+        <section class="tab-content" id="experiment">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Experiment 2: 7-Day Premium Trial</h1>
+                    <p class="section-subtitle">High-priority conversion optimization experiment</p>
+                </div>
+
+                <div class="hypothesis-card" data-animate>
+                    <div class="hypothesis-header">
+                        <span class="material-icons">science</span>
+                        <h2>Hypothesis</h2>
+                    </div>
+                    <p class="hypothesis-statement">Offering a 7-day premium trial to new signups will increase conversion by demonstrating value and creating habit formation before payment commitment</p>
+                    <div class="hypothesis-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Theoretical Basis</span>
+                            <span class="meta-value">Opt-out trials convert at 48.8% vs 18.2% opt-in (industry benchmark)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="badge badge-purple">Endowment effect + loss aversion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-grid" data-animate>
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            <h3>Current State</h3>
+                            <span class="conversion-badge">3.5%</span>
+                        </div>
+                        <p class="comparison-description">Direct freemium model (no trial)</p>
+                        <h4>Pain Points:</h4>
+                        <ul class="pain-points">
+                            <li>Users cannot experience premium value before purchase</li>
+                            <li>High friction at payment decision point</li>
+                            <li>Limited understanding of premium benefits</li>
+                        </ul>
+                    </div>
+
+                    <div class="comparison-card comparison-treatment">
+                        <div class="comparison-header">
+                            <h3>Treatment</h3>
+                            <span class="conversion-badge badge-success">6.8%</span>
+                        </div>
+                        <p class="comparison-description">7-day premium trial (auto-enrollment)</p>
+                        <h4>Key Changes:</h4>
+                        <ul class="changes-list">
+                            <li><span class="material-icons">check_circle</span> Auto-enroll new signups in trial</li>
+                            <li><span class="material-icons">check_circle</span> Unlock all premium features</li>
+                            <li><span class="material-icons">check_circle</span> Strategic engagement messaging</li>
+                            <li><span class="material-icons">check_circle</span> No credit card required</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordions-section" data-animate>
+                    <h2>Changes Required</h2>
+                    
+                    <div class="accordion">
+                        <button class="accordion-header">
+                            <span class="accordion-title">
+                                <span class="material-icons">build</span>
+                                Product Changes
+                            </span>
+                            <span class="material-icons accordion-icon">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Auto-enroll new signups in 7-day premium trial (no credit card)</li>
+                                <li>Unlock all premium features: unlimited applications, AI resume builder, priority visibility</li>
+                                <li>Add trial countdown timer in UI header</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <button class="accordion-header">
+                            <span class="accordion-title">
+                                <span class="material-icons">campaign</span>
+                                Messaging Strategy
+                            </span>
+                            <span class="material-icons accordion-icon">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Day 1: Welcome email with feature tour video</li>
+                                <li>Day 3: Usage report email (jobs applied, profile views)</li>
+                                <li>Day 5: Upgrade prompt with 20% limited-time discount</li>
+                                <li>Day 7: Trial expiry notification with downgrade preview</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <button class="accordion-header">
+                            <span class="accordion-title">
+                                <span class="material-icons">code</span>
+                                Technical Requirements
+                            </span>
+                            <span class="material-icons accordion-icon">expand_more</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Feature flag system for trial enrollment</li>
+                                <li>Trial state management (active/expired/converted)</li>
+                                <li>Analytics instrumentation for trial funnel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-grid" data-animate>
+                    <h2>Expected Results</h2>
+                    <div class="result-cards">
+                        <div class="result-card">
+                            <span class="result-label">Control</span>
+                            <span class="result-value">3.5%</span>
+                        </div>
+                        <div class="result-card result-highlight">
+                            <span class="result-label">Treatment</span>
+                            <span class="result-value">6.8%</span>
+                        </div>
+                        <div class="result-card result-success">
+                            <span class="result-label">Uplift</span>
+                            <span class="result-value">+94.3%</span>
+                        </div>
+                        <div class="result-card">
+                            <span class="result-label">Revenue Impact</span>
+                            <span class="result-value">+₹66.2L MRR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistical-design" data-animate>
+                    <h2>Statistical Design</h2>
+                    <div class="design-table">
+                        <div class="design-row">
+                            <span class="design-label">Sample Size (per variant)</span>
+                            <span class="design-value">40,000 users</span>
+                        </div>
+                        <div class="design-row">
+                            <span class="design-label">Duration</span>
+                            <span class="design-value">6 weeks</span>
+                        </div>
+                        <div class="design-row">
+                            <span class="design-label">Confidence Level</span>
+                            <span class="design-value">95%</span>
+                        </div>
+                        <div class="design-row">
+                            <span class="design-label">Statistical Power</span>
+                            <span class="design-value">80%</span>
+                        </div>
+                    </div>
+
+                    <div class="metrics-section">
+                        <div class="metrics-column">
+                            <h3><span class="material-icons">check_circle</span> Success Metrics</h3>
+                            <ul>
+                                <li>Trial-to-Paid Conversion Rate ≥6.8%</li>
+                                <li>Feature Adoption During Trial ≥70%</li>
+                                <li>Time to First Application &lt;24 hours</li>
+                            </ul>
+                        </div>
+                        <div class="metrics-column">
+                            <h3><span class="material-icons">shield</span> Guardrail Metrics</h3>
+                            <ul>
+                                <li>7-Day Churn Rate &lt;5% increase</li>
+                                <li>NPS Score ≥40</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 4: User Flow -->
+        <section class="tab-content" id="user-flow">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Premium Trial Journey</h1>
+                    <p class="section-subtitle">User experience flow from signup to conversion</p>
+                </div>
+
+                <div class="flow-timeline">
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">1</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Signup</h3>
+                            <p class="stage-description">New user creates account</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> Email/phone verification</li>
+                                    <li><span class="material-icons">check</span> Profile creation wizard</li>
+                                </ul>
+                            </div>
+                            <span class="stage-badge">New User</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">2</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Trial Auto-Enrollment</h3>
+                            <p class="stage-description">System automatically activates 7-day trial</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> Welcome modal: 'Premium unlocked for 7 days!'</li>
+                                    <li><span class="material-icons">check</span> Premium badge on profile</li>
+                                    <li><span class="material-icons">check</span> Trial countdown starts</li>
+                                </ul>
+                            </div>
+                            <span class="stage-badge">Trial Active</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">3</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Day 1-2: Exploration</h3>
+                            <p class="stage-description">User discovers premium features</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> Apply to unlimited jobs (vs 3 free)</li>
+                                    <li><span class="material-icons">check</span> Use AI resume builder</li>
+                                    <li><span class="material-icons">check</span> Get priority listing visibility</li>
+                                </ul>
+                            </div>
+                            <div class="stage-touchpoints">
+                                <h4>Touchpoints:</h4>
+                                <span class="touchpoint">Day 1 email: Feature tour</span>
+                                <span class="touchpoint">In-app tooltips</span>
+                            </div>
+                            <span class="stage-badge badge-engaged">Engaged Trial</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">4</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Day 3-4: Engagement</h3>
+                            <p class="stage-description">Build habit &amp; demonstrate value</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> Track applications sent</li>
+                                    <li><span class="material-icons">check</span> Monitor profile views</li>
+                                    <li><span class="material-icons">check</span> Receive recruiter messages</li>
+                                </ul>
+                            </div>
+                            <div class="stage-touchpoints">
+                                <h4>Touchpoints:</h4>
+                                <span class="touchpoint">Day 3 email: Usage stats</span>
+                                <span class="touchpoint">Push: 'You've applied to 12 jobs!'</span>
+                            </div>
+                            <span class="stage-badge badge-active">Active Trial</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">5</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Day 5-6: Conversion Push</h3>
+                            <p class="stage-description">Urgency + incentive messaging</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> View upgrade prompt</li>
+                                    <li><span class="material-icons">check</span> See 20% discount offer</li>
+                                    <li><span class="material-icons">check</span> Compare free vs premium features</li>
+                                </ul>
+                            </div>
+                            <div class="stage-touchpoints">
+                                <h4>Touchpoints:</h4>
+                                <span class="touchpoint">Day 5 email: Upgrade CTA</span>
+                                <span class="touchpoint">In-app modal: Trial ending</span>
+                                <span class="touchpoint">Push: Limited 20% off</span>
+                            </div>
+                            <span class="stage-badge badge-warning">Decision Point</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">6</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Day 7: Conversion Moment</h3>
+                            <p class="stage-description">User decides to upgrade or downgrade</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> Click 'Upgrade Now' button</li>
+                                    <li><span class="material-icons">check</span> Complete payment (₹799/mo or ₹639 with discount)</li>
+                                    <li><span class="material-icons">check</span> Confirmation &amp; receipt</li>
+                                </ul>
+                            </div>
+                            <span class="stage-badge badge-decision">Decision</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-branch">
+                        <div class="branch-path branch-success" data-animate>
+                            <div class="branch-line"></div>
+                            <div class="branch-card">
+                                <span class="branch-icon material-icons">check_circle</span>
+                                <h4>Paid Subscriber</h4>
+                                <p class="branch-rate">6.8%</p>
+                                <p class="branch-description">User converts to paid plan</p>
+                            </div>
+                        </div>
+                        <div class="branch-path branch-neutral" data-animate>
+                            <div class="branch-line"></div>
+                            <div class="branch-card">
+                                <span class="branch-icon material-icons">cancel</span>
+                                <h4>Free User</h4>
+                                <p class="branch-rate">93.2%</p>
+                                <p class="branch-description">User downgrades to free tier</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-stage" data-animate>
+                        <div class="stage-number">7</div>
+                        <div class="stage-card">
+                            <h3 class="stage-name">Post-Conversion</h3>
+                            <p class="stage-description">Onboard paid user or retain free user</p>
+                            <div class="stage-actions">
+                                <h4>Actions:</h4>
+                                <ul>
+                                    <li><span class="material-icons">check</span> If Paid: Thank you email + community access</li>
+                                    <li><span class="material-icons">check</span> If Free: Show what they'll lose + winback sequence</li>
+                                </ul>
+                            </div>
+                            <span class="stage-badge badge-final">Final</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 5: Projections -->
+        <section class="tab-content" id="projections">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Predicted Results &amp; Growth Metrics</h1>
+                    <p class="section-subtitle">6-month growth projections with scenario analysis</p>
+                </div>
+
+                <div class="scenarios-grid" data-animate>
+                    <div class="scenario-card scenario-conservative">
+                        <div class="scenario-header">
+                            <h3>Conservative</h3>
+                            <span class="probability">70% probability</span>
+                        </div>
+                        <div class="scenario-metrics">
+                            <div class="scenario-metric">
+                                <span class="metric-label">Conversion Uplift</span>
+                                <span class="metric-value">+60%</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">New MRR</span>
+                                <span class="metric-value">₹45.5L</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ARR Projection</span>
+                                <span class="metric-value">₹15.9Cr</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ROI Multiple</span>
+                                <span class="metric-value">3.2x</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card scenario-base">
+                        <div class="scenario-header">
+                            <h3>Base Case</h3>
+                            <span class="probability">50% probability</span>
+                        </div>
+                        <div class="scenario-badge">RECOMMENDED</div>
+                        <div class="scenario-metrics">
+                            <div class="scenario-metric">
+                                <span class="metric-label">Conversion Uplift</span>
+                                <span class="metric-value">+94.3%</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">New MRR</span>
+                                <span class="metric-value">₹66.2L</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ARR Projection</span>
+                                <span class="metric-value">₹18.4Cr</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ROI Multiple</span>
+                                <span class="metric-value">4.8x</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-card scenario-optimistic">
+                        <div class="scenario-header">
+                            <h3>Optimistic</h3>
+                            <span class="probability">30% probability</span>
+                        </div>
+                        <div class="scenario-metrics">
+                            <div class="scenario-metric">
+                                <span class="metric-label">Conversion Uplift</span>
+                                <span class="metric-value">+130%</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">New MRR</span>
+                                <span class="metric-value">₹84.8L</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ARR Projection</span>
+                                <span class="metric-value">₹20.7Cr</span>
+                            </div>
+                            <div class="scenario-metric">
+                                <span class="metric-label">ROI Multiple</span>
+                                <span class="metric-value">6.5x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-section" data-animate>
+                    <h2>6-Month Growth Projection</h2>
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="indicators-grid" data-animate>
+                    <h2>Key Indicators</h2>
+                    <div class="indicators">
+                        <div class="indicator-card">
+                            <h3>CAC Payback Period</h3>
+                            <div class="indicator-comparison">
+                                <span class="current-value">18 months</span>
+                                <span class="arrow">→</span>
+                                <span class="projected-value">9 months</span>
+                            </div>
+                            <div class="improvement improvement-positive">
+                                <span class="material-icons">trending_down</span>
+                                <span>50% reduction</span>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card">
+                            <h3>LTV:CAC Ratio</h3>
+                            <div class="indicator-comparison">
+                                <span class="current-value">2.1:1</span>
+                                <span class="arrow">→</span>
+                                <span class="projected-value">4.5:1</span>
+                            </div>
+                            <div class="improvement improvement-positive">
+                                <span class="material-icons">trending_up</span>
+                                <span>114% increase</span>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card">
+                            <h3>Monthly Churn</h3>
+                            <div class="indicator-comparison">
+                                <span class="current-value">48.1%</span>
+                                <span class="arrow">→</span>
+                                <span class="projected-value">42.0%</span>
+                            </div>
+                            <div class="improvement improvement-positive">
+                                <span class="material-icons">trending_down</span>
+                                <span>6.1pp reduction</span>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card">
+                            <h3>Quick Ratio</h3>
+                            <div class="indicator-comparison">
+                                <span class="current-value">1.01x</span>
+                                <span class="arrow">→</span>
+                                <span class="projected-value">1.35x</span>
+                            </div>
+                            <div class="improvement improvement-positive">
+                                <span class="material-icons">trending_up</span>
+                                <span>34% increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 6: About -->
+        <section class="tab-content" id="about">
+            <div class="container">
+                <div class="about-container">
+                    <div class="profile-card" data-animate>
+                        <div class="profile-avatar">
+                            <div class="avatar-initials">KP</div>
+                        </div>
+                        <h1 class="profile-name">Kaustav Panja</h1>
+                        <h2 class="profile-title">MBA Candidate in Business Analytics</h2>
+                        <div class="profile-institution">
+                            <span class="material-icons">school</span>
+                            <span>BITS Pilani</span>
+                        </div>
+                        <p class="profile-tagline">Data Enthusiast &amp; GenAI Tinkerer</p>
+                        
+                        <div class="profile-bio">
+                            <p>First-year MBA student specializing in Business Analytics with a passion for transforming data into actionable growth strategies. Combines technical proficiency in SQL, Python, and R with business acumen to solve real-world problems in SaaS and EdTech domains.</p>
+                        </div>
+
+                        <div class="interests-section">
+                            <h3>Interests</h3>
+                            <div class="interests-grid">
+                                <div class="interest-card">
+                                    <div class="interest-icon">⚽</div>
+                                    <h4>Football</h4>
+                                    <p>Passionate fan and weekend player</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">💪</div>
+                                    <h4>Fitness &amp; Exercise</h4>
+                                    <p>Regular gym routine and strength training</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">🥊</div>
+                                    <h4>UFC &amp; Combat Sports</h4>
+                                    <p>Avid follower of MMA and boxing</p>
+                                </div>
+                                <div class="interest-card">
+                                    <div class="interest-icon">🏍️</div>
+                                    <h4>Bike Riding</h4>
+                                    <p>Long-distance rides and motorcycle maintenance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h3>Skills &amp; Expertise</h3>
+                            
+                            <div class="skills-category">
+                                <h4>Technical Skills</h4>
+                                <div class="skills-pills">
+                                    <span class="skill-pill">Python (pandas, numpy, scipy)</span>
+                                    <span class="skill-pill">SQL &amp; PostgreSQL</span>
+                                    <span class="skill-pill">R (statistical analysis)</span>
+                                    <span class="skill-pill">Data Visualization</span>
+                                    <span class="skill-pill">A/B Testing &amp; Experimentation</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h4>Business Skills</h4>
+                                <div class="skills-pills">
+                                    <span class="skill-pill">Growth Accounting Frameworks</span>
+                                    <span class="skill-pill">Freemium Business Models</span>
+                                    <span class="skill-pill">SaaS Metrics &amp; KPIs</span>
+                                    <span class="skill-pill">Product Analytics</span>
+                                    <span class="skill-pill">Strategic Decision-Making</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-category">
+                                <h4>Tools &amp; Platforms</h4>
+                                <div class="skills-pills">
+                                    <span class="skill-pill">Jupyter Notebooks</span>
+                                    <span class="skill-pill">dbt (data transformation)</span>
+                                    <span class="skill-pill">Git &amp; Version Control</span>
+                                    <span class="skill-pill">Amplitude / Mixpanel</span>
+                                    <span class="skill-pill">Excel &amp; Google Sheets</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-role">
+                            <span class="material-icons">workspace_premium</span>
+                            <span>Project Role: Lead Analyst &amp; Framework Designer</span>
+                        </div>
+
+                        <div class="contact-links">
+                            <a href="https://linkedin.com/in/kaustav-panja" target="_blank" class="contact-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/kaustav-panja" target="_blank" class="contact-link" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:kaustav.panja@pilani.bits-pilani.ac.in" class="contact-link" aria-label="Email">
+                                <span class="material-icons">email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>MBA Business Analytics Project | BITS Pilani | 2025</p>
+            <p>Framework: Growth Accounting for Freemium Platforms</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

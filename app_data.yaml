@@ -1,0 +1,387 @@
+
+# Business Problem Data
+business_problem:
+  title: "Freemium Growth Optimization Challenge"
+  platform_name: "Student Opportunity Marketplace"
+  current_mau: 311860
+  current_conversion: 3.5
+  target_conversion: 6.8
+  current_mrr: 8721085
+  current_arr: 104653020
+  industry: "EdTech / Student Engagement"
+  geography: "India"
+
+  key_challenges:
+    - title: "High Monthly Churn"
+      value: "48.1%"
+      description: "Nearly half of users churn monthly, creating a 'leaky bucket' effect"
+      icon: "trending_down"
+    - title: "Low Freemium Conversion"
+      value: "3.5%"
+      description: "Only 3.5% of free users convert to paid subscribers"
+      icon: "payments"
+    - title: "Marginal Net Growth"
+      value: "1.01x"
+      description: "Quick Ratio barely above 1.0 indicates stagnant growth quality"
+      icon: "analytics"
+    - title: "Revenue Plateau"
+      value: "₹10.5Cr"
+      description: "Annual revenue stuck despite large user base (312K MAU)"
+      icon: "trending_flat"
+
+  opportunity:
+    statement: "Industry leaders achieve 6-8% conversion rates with 40-45% churn"
+    potential_arr: "₹23+ Crores"
+    potential_uplift: "120%"
+
+# Current State Data for Carousel
+current_state:
+  slides:
+    - title: "User Base Overview"
+      metric: "311,860"
+      label: "Monthly Active Users"
+      insight: "Strong acquisition (43.2% new user rate) but offset by high churn"
+      trend: "neutral"
+      supporting_stats:
+        - label: "New Users/Month"
+          value: "~107K avg"
+        - label: "Retention Rate"
+          value: "51.9%"
+        - label: "Quick Ratio"
+          value: "1.01x"
+
+    - title: "Revenue Performance"
+      metric: "₹87.2L"
+      label: "Monthly Recurring Revenue"
+      insight: "Only 10,915 paid subscribers from 312K users (3.5% conversion)"
+      trend: "warning"
+      supporting_stats:
+        - label: "Paid Subscribers"
+          value: "10,915"
+        - label: "ARPU"
+          value: "₹799/mo"
+        - label: "Annual Run-rate"
+          value: "₹10.5Cr"
+
+    - title: "Growth Quality"
+      metric: "51.9%"
+      label: "Gross Retention Rate"
+      insight: "Above industry benchmark (35-45%) but still 48% monthly churn"
+      trend: "positive"
+      supporting_stats:
+        - label: "vs. Benchmark"
+          value: "+15-48%"
+        - label: "Churn Rate"
+          value: "48.1%"
+        - label: "Trend"
+          value: "Improving"
+
+    - title: "Seasonal Patterns"
+      metric: "1.53x"
+      label: "Peak Season Quick Ratio"
+      insight: "Aug-Oct placement season drives 130K-152K new users/month"
+      trend: "positive"
+      supporting_stats:
+        - label: "Peak Months"
+          value: "Aug-Oct"
+        - label: "Low Months"
+          value: "May-Jun"
+        - label: "Variation"
+          value: "2x swing"
+
+    - title: "Conversion Funnel"
+      metric: "7.0%"
+      label: "Payment Page Visitors"
+      insight: "Major drop-off: 7% visit payment page but only 3.5% convert"
+      trend: "warning"
+      supporting_stats:
+        - label: "Engaged Users"
+          value: "50%"
+        - label: "Feature Explorers"
+          value: "20%"
+        - label: "Conversion Gap"
+          value: "3.5pp"
+
+# Experiment Data (Premium Trial - Experiment 2)
+experiment:
+  name: "7-Day Premium Trial"
+  experiment_id: "EXP-002"
+  priority: "High"
+
+  hypothesis:
+    statement: "Offering a 7-day premium trial to new signups will increase conversion by demonstrating value and creating habit formation before payment commitment"
+    theoretical_basis: "Opt-out trials convert at 48.8% vs 18.2% opt-in (industry benchmark)"
+    behavioral_driver: "Endowment effect + loss aversion"
+
+  current_state:
+    conversion_rate: 3.5
+    baseline_description: "Direct freemium model (no trial)"
+    user_friction: "Users cannot experience premium value before purchase decision"
+
+  changes_required:
+    - category: "Product"
+      items:
+        - "Auto-enroll new signups in 7-day premium trial (no credit card)"
+        - "Unlock all premium features: unlimited applications, AI resume builder, priority visibility"
+        - "Add trial countdown timer in UI header"
+    - category: "Messaging"
+      items:
+        - "Day 1: Welcome email with feature tour video"
+        - "Day 3: Usage report email (jobs applied, profile views)"
+        - "Day 5: Upgrade prompt with 20% limited-time discount"
+        - "Day 7: Trial expiry notification with downgrade preview"
+    - category: "Technical"
+      items:
+        - "Feature flag system for trial enrollment"
+        - "Trial state management (active/expired/converted)"
+        - "Analytics instrumentation for trial funnel"
+
+  expected_results:
+    control_conversion: 3.5
+    treatment_conversion: 6.8
+    relative_uplift: 94.3
+    absolute_uplift: 3.3
+    new_paid_users: 5305
+    monthly_revenue_impact: 6621000
+    annual_revenue_impact: 79452000
+
+  statistical_design:
+    sample_size_per_variant: 40000
+    total_sample: 80000
+    duration_weeks: 6
+    confidence_level: 95
+    statistical_power: 80
+    minimum_detectable_effect: 94.3
+    test_type: "Two-proportion z-test"
+
+  success_metrics:
+    primary:
+      - name: "Trial-to-Paid Conversion Rate"
+        target: "≥6.8%"
+    secondary:
+      - name: "Feature Adoption During Trial"
+        target: "≥70% use 3+ premium features"
+      - name: "Time to First Application"
+        target: "<24 hours"
+    guardrails:
+      - name: "7-Day Churn Rate"
+        threshold: "<5% increase"
+      - name: "NPS Score"
+        threshold: "≥40"
+
+# User Flow Data
+user_flow:
+  title: "Premium Trial User Journey"
+
+  stages:
+    - id: 1
+      name: "Signup"
+      description: "New user creates account"
+      actions:
+        - "Email/phone verification"
+        - "Profile creation wizard"
+      state: "New User"
+
+    - id: 2
+      name: "Trial Auto-Enrollment"
+      description: "System automatically activates 7-day trial"
+      actions:
+        - "Welcome modal: 'Premium unlocked for 7 days!'"
+        - "Premium badge on profile"
+        - "Trial countdown starts"
+      state: "Trial Active"
+
+    - id: 3
+      name: "Day 1-2: Exploration"
+      description: "User discovers premium features"
+      actions:
+        - "Apply to unlimited jobs (vs 3 free)"
+        - "Use AI resume builder"
+        - "Get priority listing visibility"
+      state: "Engaged Trial"
+      touchpoints:
+        - "Day 1 email: Feature tour"
+        - "In-app tooltips for premium features"
+
+    - id: 4
+      name: "Day 3-4: Engagement"
+      description: "Build habit & demonstrate value"
+      actions:
+        - "Track applications sent"
+        - "Monitor profile views"
+        - "Receive recruiter messages"
+      state: "Active Trial"
+      touchpoints:
+        - "Day 3 email: Usage stats + social proof"
+        - "Push: 'You've applied to 12 jobs this week!'"
+
+    - id: 5
+      name: "Day 5-6: Conversion Push"
+      description: "Urgency + incentive messaging"
+      actions:
+        - "View upgrade prompt"
+        - "See 20% discount offer"
+        - "Compare free vs premium features"
+      state: "Decision Point"
+      touchpoints:
+        - "Day 5 email: Upgrade CTA with discount"
+        - "In-app modal: Trial ending in 2 days"
+        - "Push: Limited-time 20% off"
+
+    - id: 6
+      name: "Day 7: Conversion Moment"
+      description: "User decides to upgrade or downgrade"
+      actions:
+        - "Click 'Upgrade Now' button"
+        - "Complete payment (₹799/mo or ₹639 with discount)"
+        - "Confirmation & receipt"
+      state: "Decision"
+      outcomes:
+        - path: "Paid Subscriber"
+          rate: "6.8%"
+          description: "User converts to paid plan"
+        - path: "Free User"
+          rate: "93.2%"
+          description: "User downgrades to free tier"
+
+    - id: 7
+      name: "Post-Conversion"
+      description: "Onboard paid user or retain free user"
+      actions:
+        - "If Paid: Thank you email + community access"
+        - "If Free: Show what they'll lose + winback sequence"
+      state: "Final"
+
+# Predicted Results
+predicted_results:
+  timeline: "6-Month Projection"
+
+  scenarios:
+    - name: "Conservative"
+      probability: "70%"
+      metrics:
+        conversion_uplift: 60
+        new_conversion_rate: 5.6
+        monthly_new_paid: 3640
+        mrr_increase: 4551000
+        arr_projection: 159300000
+        roi_multiple: 3.2
+
+    - name: "Base Case"
+      probability: "50%"
+      metrics:
+        conversion_uplift: 94.3
+        new_conversion_rate: 6.8
+        monthly_new_paid: 5305
+        mrr_increase: 6621000
+        arr_projection: 184100000
+        roi_multiple: 4.8
+
+    - name: "Optimistic"
+      probability: "30%"
+      metrics:
+        conversion_uplift: 130
+        new_conversion_rate: 8.1
+        monthly_new_paid: 6785
+        mrr_increase: 8476000
+        arr_projection: 206500000
+        roi_multiple: 6.5
+
+  growth_projections:
+    months:
+      - month: "Month 1"
+        mau: 311860
+        paid_users: 10915
+        mrr: 8721000
+        conversion: 3.5
+      - month: "Month 2"
+        mau: 325000
+        paid_users: 13450
+        mrr: 10746000
+        conversion: 4.1
+      - month: "Month 3"
+        mau: 340000
+        paid_users: 16830
+        mrr: 13447000
+        conversion: 4.9
+      - month: "Month 4"
+        mau: 358000
+        paid_users: 20640
+        mrr: 16491000
+        conversion: 5.8
+      - month: "Month 5"
+        mau: 375000
+        paid_users: 24375
+        mrr: 19476000
+        conversion: 6.5
+      - month: "Month 6"
+        mau: 390000
+        paid_users: 26520
+        mrr: 21189000
+        conversion: 6.8
+
+  key_indicators:
+    - metric: "CAC Payback Period"
+      current: "18 months"
+      projected: "9 months"
+      improvement: "50% reduction"
+    - metric: "LTV:CAC Ratio"
+      current: "2.1:1"
+      projected: "4.5:1"
+      improvement: "114% increase"
+    - metric: "Monthly Churn"
+      current: "48.1%"
+      projected: "42.0%"
+      improvement: "6.1pp reduction"
+    - metric: "Quick Ratio"
+      current: "1.01x"
+      projected: "1.35x"
+      improvement: "34% increase"
+
+# About Student
+about_student:
+  name: "Kaustav Panja"
+  title: "MBA Candidate in Business Analytics"
+  institution: "BITS Pilani"
+  tagline: "Data Enthusiast & GenAI Tinkerer"
+
+  bio: "First-year MBA student specializing in Business Analytics with a passion for transforming data into actionable growth strategies. Combines technical proficiency in SQL, Python, and R with business acumen to solve real-world problems in SaaS and EdTech domains."
+
+  interests:
+    - name: "Football"
+      icon: "sports_soccer"
+      description: "Passionate fan and weekend player"
+    - name: "Fitness & Exercise"
+      icon: "fitness_center"
+      description: "Regular gym routine and strength training"
+    - name: "UFC & Combat Sports"
+      icon: "sports_mma"
+      description: "Avid follower of MMA and boxing"
+    - name: "Bike Riding"
+      icon: "two_wheeler"
+      description: "Long-distance rides and motorcycle maintenance"
+
+  skills:
+    technical:
+      - "Python (pandas, numpy, scipy)"
+      - "SQL & PostgreSQL"
+      - "R (statistical analysis)"
+      - "Data Visualization (Matplotlib, Plotly)"
+      - "A/B Testing & Experimentation"
+    business:
+      - "Growth Accounting Frameworks"
+      - "Freemium Business Models"
+      - "SaaS Metrics & KPIs"
+      - "Product Analytics"
+      - "Strategic Decision-Making"
+    tools:
+      - "Jupyter Notebooks"
+      - "dbt (data transformation)"
+      - "Git & Version Control"
+      - "Amplitude / Mixpanel"
+      - "Excel & Google Sheets"
+
+  project_role: "Lead Analyst & Framework Designer"
+  linkedin: "https://linkedin.com/in/kaustav-panja"
+  github: "https://github.com/kaustav-panja"
+  email: "kaustav.panja@pilani.bits-pilani.ac.in"
